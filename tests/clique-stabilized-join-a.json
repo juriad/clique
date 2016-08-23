@@ -1,0 +1,52 @@
+{
+	"behavior": "cz.artique.vad.clique.Clique$CliqueBehavior",
+	"graphs": [
+		{
+			"id": "B",
+			"type": "clique",
+			"size": 10,
+			"probability": 1,
+			"connectivity": 1
+		},
+		{
+			"id": "A",
+			"type": "clique",
+			"size": 1,
+			"probability": 1,
+			"connectivity": 1
+		}
+	],
+	"actions": [
+		{
+			"type": "start",
+			"delay": 0,
+			"graphs": [
+				"A",
+				"B"
+			]
+		},
+		{
+			"type": "search",
+			"delay": 2,
+			"period": 1,
+			"from": "A-random",
+			"to": "B-random"
+		},
+		{
+			"type": "join",
+			"from": "B-random",
+			"to": "A-random",
+			"delay": 1,
+			"limit": 1
+		},
+		{
+			"type": "keep-alive",
+			"delay": 30
+		},
+		{
+			"type": "test-stabilize",
+			"delay": 0.5,
+			"period": 1
+		}
+	]
+}

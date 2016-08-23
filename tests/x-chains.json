@@ -1,0 +1,53 @@
+{
+	"behavior": "cz.artique.vad.clique.Clique$CliqueBehavior",
+	"graphs": [
+		{
+			"id": "A",
+			"type": "manual",
+			"size": 21,
+			"desc": "
+			0->1
+			1->2
+			2->3
+			3->4
+			4->10
+			
+			5->6
+			6->7
+			7->8
+			8->9
+			9->10
+			
+			10->11
+			11->12
+			12->13
+			13->14
+			14->15
+			
+			10->16
+			16->17
+			17->18
+			18->19
+			19->20
+			"
+		}
+	],
+	"actions": [
+		{
+			"type": "start",
+			"delay": 0,
+			"graphs": [
+				"A"
+			]
+		},
+		{
+			"type": "keep-alive",
+			"delay": 30
+		},
+		{
+			"type": "test-stabilize",
+			"delay": 0.5,
+			"period": 1
+		}
+	]
+}
